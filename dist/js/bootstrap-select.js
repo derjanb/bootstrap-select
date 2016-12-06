@@ -333,6 +333,7 @@
   Selectpicker.DEFAULTS = {
     noneSelectedText: 'Nothing selected',
     noneResultsText: 'No results matched {0}',
+    createItemText: 'Use: {0}',
     countSelectedText: function (numSelected, numTotal) {
       return (numSelected == 1) ? "{0} item selected" : "{0} items selected";
     },
@@ -375,7 +376,8 @@
     mobile: false,
     selectOnTab: false,
     dropdownAlignRight: false,
-    windowPadding: 0
+    windowPadding: 0,
+    createItem: false
   };
 
   Selectpicker.prototype = {
@@ -1254,6 +1256,12 @@
         }
       });
 
+      if (that.options.createItem) {
+        this.$menuInner.on('click', 'li.no-results', function (e) {
+          that.createItem(that.$searchbox.val());
+        })
+      }
+
       this.$menuInner.on('click', 'li a', function (e) {
         var $this = $(this),
             clickedIndex = $this.parent().data('originalIndex'),
@@ -1420,6 +1428,10 @@
       var that = this,
           $no_results = $('<li class="no-results"></li>');
 
+      if (that.options.createItem) {
+        $no_results.addClass('clickable');
+      }
+
       this.$button.on('click.dropdown.data-api', function () {
         that.$menuInner.find('.active').removeClass('active');
         if (!!that.$searchbox.val()) {
@@ -1452,7 +1464,9 @@
           }
 
           if ($hideItems.length === $searchBase.length) {
-            $no_results.html(that.options.noneResultsText.replace('{0}', '"' + htmlEscape(that.$searchbox.val()) + '"'));
+            var text = that.options.createItem ? that.options.createItemText : that.options.noneResultsText;
+            $no_results.html(text.replace('{0}', '"' + htmlEscape(that.$searchbox.val()) + '"'))
+
             that.$menuInner.append($no_results);
             that.$lis.addClass('hidden');
           } else {
@@ -1756,7 +1770,13 @@
           // Fixes spacebar selection of dropdown items in FF & IE
           $(document).data('spaceSelect', true);
         } else if (!/(32)/.test(e.keyCode.toString(10))) {
-          that.$menuInner.find('.active a').click();
+
+          var active = that.$menuInner.find('.active');
+          if(active.length == 0 && that.options.createItem) {
+            that.createItem(that.$searchbox.val());
+          } else {
+            that.$menuInner.find('.active a').click();
+          }
           $this.focus();
         }
         $(document).data('keycount', 0);
@@ -1767,6 +1787,14 @@
         if (that.options.container) that.$newElement.removeClass('open');
         that.$button.focus();
       }
+    },
+
+    createItem: function(val) {
+      this.$element.append($('<option value="' + val + '">' + val + '</option>'));
+      this.$newElement.removeClass('open');
+      this.refresh();
+      this.val(val);
+      this.$element.change();
     },
 
     mobile: function () {
