@@ -4,7 +4,7 @@
  * Region: HU (Hungary)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['hu_HU'] = {
     noneSelectedText: 'Válasszon!',
     noneResultsText: 'Nincs találat {0}',
     countSelectedText: function (numSelected, numTotal) {

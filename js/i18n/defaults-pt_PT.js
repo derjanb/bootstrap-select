@@ -5,7 +5,7 @@
 * Author: Burnspirit <burnspirit@gmail.com>
 */
 (function ($) {
-$.fn.selectpicker.defaults = {
+($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['pt_PT'] = {
 noneSelectedText: 'Nenhum seleccionado',
 noneResultsText: 'Sem resultados contendo {0}',
 countSelectedText: 'Selecionado {0} de {1}',

@@ -4,7 +4,7 @@
  * Region: LT (Lithuania)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['lt_LT'] = {
     noneSelectedText: 'Niekas nepasirinkta',
     noneResultsText: 'Niekas nesutapo su {0}',
     countSelectedText: function (numSelected, numTotal) {

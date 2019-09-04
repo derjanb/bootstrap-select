@@ -4,7 +4,7 @@
  * Region: CRO (Croatia)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['cro_CRO'] = {
     noneSelectedText: 'Odaberite stavku',
     noneResultsText: 'Nema rezultata pretrage {0}',
     countSelectedText: function (numSelected, numTotal) {

@@ -4,7 +4,7 @@
  * Region: SE (Sweden)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['sv_SE'] = {
     noneSelectedText: 'Inget valt',
     noneResultsText: 'Inget sökresultat matchar {0}',
     countSelectedText: function (numSelected, numTotal) {

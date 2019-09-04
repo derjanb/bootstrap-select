@@ -5,7 +5,7 @@
  * Author: Serhan Güney
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['tr_TR'] = {
     noneSelectedText: 'Hiçbiri seçilmedi',
     noneResultsText: 'Hiçbir sonuç bulunamadı {0}',
     countSelectedText: function (numSelected, numTotal) {

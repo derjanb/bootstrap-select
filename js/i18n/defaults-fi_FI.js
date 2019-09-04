@@ -4,7 +4,7 @@
  * Region: FI (Finland)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['fi_FI'] = {
     noneSelectedText: 'Ei valintoja',
     noneResultsText: 'Ei hakutuloksia {0}',
     countSelectedText: function (numSelected, numTotal) {

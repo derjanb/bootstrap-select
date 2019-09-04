@@ -4,7 +4,7 @@
  * Region: SI (Slovenia)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['sl_SI'] = {
     noneSelectedText: 'Nič izbranega',
     noneResultsText: 'Ni zadetkov za {0}',
     countSelectedText: function (numSelected, numTotal) {

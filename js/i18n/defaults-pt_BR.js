@@ -5,7 +5,7 @@
  * Author: Rodrigo de Avila <rodrigo@avila.net.br>
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['pr_BR'] = {
     noneSelectedText: 'Nada selecionado',
     noneResultsText: 'Nada encontrado contendo {0}',
     countSelectedText: 'Selecionado {0} de {1}',

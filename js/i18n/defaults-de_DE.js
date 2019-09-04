@@ -4,7 +4,7 @@
  * Region: DE (Germany, Deutschland)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['de_DE'] = {
     noneSelectedText: 'Bitte wählen...',
     noneResultsText: 'Keine Ergebnisse für {0}',
     countSelectedText: function (numSelected, numTotal) {

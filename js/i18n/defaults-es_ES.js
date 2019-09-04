@@ -4,7 +4,7 @@
  * Region: ES (Spain)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['es_ES'] = {
     noneSelectedText: 'No hay selección',
     noneResultsText: 'No hay resultados {0}',
     countSelectedText: 'Seleccionados {0} de {1}',

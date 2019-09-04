@@ -5,7 +5,7 @@
  * Author: Michele Beltrame <mb@cattlegrid.info>
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['it_IT'] = {
     noneSelectedText: 'Nessuna selezione',
     noneResultsText: 'Nessun risultato per {0}',
     countSelectedText: function (numSelected, numTotal){

@@ -4,7 +4,7 @@
  * Region: CZ (Czech Republic)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['cs_CZ'] = {
     noneSelectedText: 'Nic není vybráno',
     noneResultsText: 'Žádné výsledky {0}',
     countSelectedText: 'Označeno {0} z {1}',

@@ -4,7 +4,7 @@
  * Author: Yasser Lotfy <y_l@alive.com>
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['ar_AR'] = {
     noneSelectedText: 'لم يتم إختيار شئ',
     noneResultsText: 'لا توجد نتائج مطابقة لـ {0}',
     countSelectedText: function (numSelected, numTotal) {

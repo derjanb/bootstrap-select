@@ -4,7 +4,7 @@
  * Region: NO (Norway)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['nb_NO'] = {
     noneSelectedText: 'Ingen valgt',
     noneResultsText: 'Søket gir ingen treff {0}',
     countSelectedText: function (numSelected, numTotal) {

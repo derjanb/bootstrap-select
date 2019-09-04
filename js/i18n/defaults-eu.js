@@ -4,7 +4,7 @@
  * Region: 
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['eu'] = {
     noneSelectedText: 'Hautapenik ez',
     noneResultsText: 'Emaitzarik ez {0}',
     countSelectedText: '{1}(e)tik {0} hautatuta',

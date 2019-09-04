@@ -4,7 +4,7 @@
  * Region: UA (Ukraine)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['ua_UA'] = {
     noneSelectedText: 'Нічого не вибрано',
     noneResultsText: 'Збігів не знайдено {0}',
     countSelectedText: 'Вибрано {0} із {1}',

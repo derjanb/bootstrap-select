@@ -4,7 +4,7 @@
  * Region: CN (China)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['zh_CN'] = {
     noneSelectedText: '没有选中任何项',
     noneResultsText: '没有找到匹配项',
     countSelectedText: '选中{1}中的{0}项',

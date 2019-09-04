@@ -4,7 +4,7 @@
  * Region: IR (Iran)
  */
 (function ($) {
-    $.fn.selectpicker.defaults = {
+    ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['fa_IR'] = {
         noneSelectedText: 'چیزی انتخاب نشده است',
         noneResultsText: 'هیج مشابهی برای {0} پیدا نشد',
         countSelectedText: "{0} از {1} مورد انتخاب شده",

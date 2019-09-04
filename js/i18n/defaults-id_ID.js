@@ -4,7 +4,7 @@
  * Region: ID (Indonesia)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['id_ID'] = {
     noneSelectedText: 'Tidak ada yang dipilih',
     noneResultsText: 'Tidak ada yang cocok {0}',
     countSelectedText: '{0} terpilih',

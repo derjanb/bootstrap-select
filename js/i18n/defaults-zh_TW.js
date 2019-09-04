@@ -4,7 +4,7 @@
  * Region: TW (Taiwan)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['zh_TW'] = {
     noneSelectedText: '沒有選取任何項目',
     noneResultsText: '沒有找到符合的結果',
     countSelectedText: '已經選取{0}個項目',

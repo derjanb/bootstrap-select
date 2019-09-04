@@ -4,7 +4,7 @@
  * Region: KR (South Korea)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['ko_KR'] = {
     noneSelectedText: '항목을 선택해주세요',
     noneResultsText: '{0} 검색 결과가 없습니다',
     countSelectedText: function (numSelected, numTotal) {

@@ -4,7 +4,7 @@
  * Region: DK (Denmark)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['da_DK'] = {
     noneSelectedText: 'Intet valgt',
     noneResultsText: 'Ingen resultater fundet {0}',
     countSelectedText: function (numSelected, numTotal) {

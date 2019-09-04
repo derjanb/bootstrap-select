@@ -4,7 +4,7 @@
  * Region: SK (Slovak Republic)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['sk_SK'] = {
     noneSelectedText: 'Vyberte zo zoznamu',
     noneResultsText: 'Pre výraz {0} neboli nájdené žiadne výsledky',
     countSelectedText: 'Vybrané {0} z {1}',

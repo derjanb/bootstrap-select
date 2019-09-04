@@ -5,7 +5,7 @@
  * Author: Daan Rosbergen (Badmuts)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['nl_NL'] = {
     noneSelectedText: 'Niets geselecteerd',
     noneResultsText: 'Geen resultaten gevonden voor {0}',
     countSelectedText: '{0} van {1} geselecteerd',

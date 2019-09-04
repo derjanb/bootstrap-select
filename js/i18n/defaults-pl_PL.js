@@ -4,7 +4,7 @@
  * Region: EU (Europe)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['pl_PL'] = {
     noneSelectedText: 'Nic nie zaznaczono',
     noneResultsText: 'Brak wyników wyszukiwania {0}',
     countSelectedText: 'Zaznaczono {0} z {1}',

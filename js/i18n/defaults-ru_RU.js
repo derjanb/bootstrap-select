@@ -4,7 +4,7 @@
  * Region: RU (Russian Federation)
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['ru_RU'] = {
     noneSelectedText: 'Ничего не выбрано',
     noneResultsText: 'Совпадений не найдено {0}',
     countSelectedText: 'Выбрано {0} из {1}',

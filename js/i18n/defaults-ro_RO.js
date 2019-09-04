@@ -5,7 +5,7 @@
  * Alex Florea <alecz.fia@gmail.com>
  */
 (function ($) {
-  $.fn.selectpicker.defaults = {
+  ($.fn.selectpicker.locales = $.fn.selectpicker.locales || {})['ro_RO'] = {
     noneSelectedText: 'Nu a fost selectat nimic',
     noneResultsText: 'Nu exista niciun rezultat {0}',
     countSelectedText: '{0} din {1} selectat(e)',
